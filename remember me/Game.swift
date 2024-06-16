@@ -52,16 +52,23 @@ struct Game: View {
                             .font(.largeTitle)
                             .padding()
                     }
-                    Text("Attempts: \(attempts)")
-                        .font(.title)
-                        .padding()
-                    Button(action: startGame) {
-                        Text("Play Again")
+                    Image("snake")
+                        .resizable()
+                        .ignoresSafeArea()
+                    VStack{
+                        Text("Victory!")
+                            .font(.title)
+                        Text("Attempts: \(attempts)")
                             .font(.title)
                             .padding()
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                        Button(action: startGame) {
+                            Text("Play Again")
+                                .font(.title)
+                                .padding()
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
                     }
                 } else {
                     VStack{
